@@ -1,11 +1,13 @@
 # CLAUDE.md
 
+
 ## 기술 스택
 - npm
 - html
 - git + gh
 - vercel
 - supabase
+
 
 ## Gitflow 규칙
 모든 기능 개발은 아래 순서를 따른다.

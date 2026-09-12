@@ -478,11 +478,6 @@ a { color: inherit; }
   color: var(--text-muted);
 }
 
-.edu-detail {
-  margin: 0;
-  font-size: 0.875rem;
-}
-
 /* Certs */
 .cert-grid {
   display: grid;
