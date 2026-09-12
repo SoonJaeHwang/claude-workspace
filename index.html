@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포트폴리오 | IT 개발 · 자문/감리 · 정보보안</title>
+<meta name="description" content="소프트웨어 개발, 정보시스템 자문/감리, 정보보안 전문가 포트폴리오">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <span class="nav-brand">Portfolio</span>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">소개</a></li>
+      <li><a href="#career">경력</a></li>
+      <li><a href="#projects">프로젝트</a></li>
+      <li><a href="#education">학력</a></li>
+      <li><a href="#certs">자격증</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" id="about">
+    <p class="hero-eyebrow">IT PROFESSIONAL</p>
+    <h1 id="heroName">OOO</h1>
+    <p class="hero-role" id="heroRole"></p>
+    <p class="hero-summary" id="heroSummary"></p>
+    <div class="hero-stats" id="heroStats"></div>
+  </section>
+
+  <section class="section" id="career">
+    <div class="container">
+      <h2 class="section-title">경력</h2>
+      <p class="section-sub">Career</p>
+      <div class="timeline" id="careerTimeline"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <h2 class="section-title">프로젝트</h2>
+      <p class="section-sub">Projects</p>
+      <div class="project-filters" id="projectFilters"></div>
+      <div class="project-list" id="projectList"></div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title">학력</h2>
+      <p class="section-sub">Education</p>
+      <div id="educationList"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="certs">
+    <div class="container">
+      <h2 class="section-title">자격증</h2>
+      <p class="section-sub">Certifications</p>
+      <div class="cert-grid" id="certGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> Portfolio. Built with HTML / CSS / JS.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
