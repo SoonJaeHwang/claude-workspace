@@ -36,6 +36,7 @@
         <li><a href="#projects">프로젝트</a></li>
         <li><a href="#education">학력</a></li>
         <li><a href="#certs">자격증</a></li>
+        <li><a href="#guestbook">방명록</a></li>
       </ul>
     </div>
   </nav>
@@ -82,6 +83,28 @@
       <div class="cert-grid" id="certGrid"></div>
     </div>
   </section>
+
+  <section class="section" id="guestbook">
+    <div class="container">
+      <h2 class="section-title">방명록</h2>
+      <p class="section-sub">Guestbook</p>
+
+      <form class="guestbook-form" id="guestbookForm">
+        <div class="guestbook-form-row">
+          <input type="text" id="guestbookName" name="name" placeholder="이름" maxlength="30" required>
+        </div>
+        <textarea id="guestbookMessage" name="message" placeholder="메시지를 남겨주세요" maxlength="300" rows="3" required></textarea>
+        <div class="guestbook-form-footer">
+          <span class="guestbook-status" id="guestbookStatus"></span>
+          <button type="submit" class="guestbook-submit" id="guestbookSubmit">남기기</button>
+        </div>
+      </form>
+
+      <div class="guestbook-list" id="guestbookList">
+        <p class="guestbook-empty" id="guestbookEmpty">방명록을 불러오는 중...</p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -90,7 +113,10 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/supabase-config.js"></script>
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
+<script src="js/guestbook.js"></script>
 </body>
 </html>
