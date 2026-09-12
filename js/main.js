@@ -98,8 +98,7 @@
           <h3>${e.school}</h3>
           <span class="edu-date">${e.date}</span>
         </div>
-        <p class="edu-major">${e.major}</p>
-        <p class="edu-detail">${e.detail}</p>`;
+        <p class="edu-major">${e.major}</p>`;
       wrap.appendChild(card);
     });
   }
