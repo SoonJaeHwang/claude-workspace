@@ -12,16 +12,32 @@
 <header class="site-header">
   <nav class="nav container">
     <span class="nav-brand">Portfolio</span>
-    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">소개</a></li>
-      <li><a href="#career">경력</a></li>
-      <li><a href="#projects">프로젝트</a></li>
-      <li><a href="#education">학력</a></li>
-      <li><a href="#certs">자격증</a></li>
-    </ul>
+
+    <div class="nav-right">
+      <div class="controls">
+        <div class="font-size-group" role="group" aria-label="글자 크기 조절">
+          <button type="button" class="font-btn" data-size="sm" aria-label="작게" title="작게">가</button>
+          <button type="button" class="font-btn active" data-size="md" aria-label="보통" title="보통">가</button>
+          <button type="button" class="font-btn" data-size="lg" aria-label="크게" title="크게">가</button>
+        </div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="다크/라이트 모드 전환" title="다크/라이트 모드 전환">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg>
+        </button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#career">경력</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#education">학력</a></li>
+        <li><a href="#certs">자격증</a></li>
+      </ul>
+    </div>
   </nav>
 </header>
 

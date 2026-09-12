@@ -131,6 +131,46 @@
     );
   }
 
+  function setupTheme() {
+    const root = document.documentElement;
+    const toggle = $("#themeToggle");
+    const stored = localStorage.getItem("theme");
+    if (stored === "light" || stored === "dark") {
+      root.setAttribute("data-theme", stored);
+    }
+    toggle.addEventListener("click", () => {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const current = root.getAttribute("data-theme") || (prefersDark ? "dark" : "light");
+      const next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  }
+
+  function setupFontSize() {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll(".font-btn");
+    const applied = localStorage.getItem("fontSize") || "md";
+
+    function apply(size) {
+      if (size === "md") {
+        root.removeAttribute("data-font-size");
+      } else {
+        root.setAttribute("data-font-size", size);
+      }
+      buttons.forEach((b) => b.classList.toggle("active", b.dataset.size === size));
+    }
+
+    apply(applied);
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const size = btn.dataset.size;
+        apply(size);
+        localStorage.setItem("fontSize", size);
+      });
+    });
+  }
+
   renderHero();
   renderCareer();
   renderProjectFilters();
@@ -138,5 +178,7 @@
   renderEducation();
   renderCerts();
   setupNav();
+  setupTheme();
+  setupFontSize();
   $("#year").textContent = new Date().getFullYear();
 })();
